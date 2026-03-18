@@ -1,0 +1,28 @@
+name: SBOM
+on:
+  push:
+    branches: [main]
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. Install dependencies so CycloneDX has an actual tree to scan
+      - name: Install Dependencies
+        run: npm install
+
+      # 2. Generate the SBOM
+      - name: Generate SBOM
+        run: npx @cyclonedx/cyclonedx-npm --output-file bom.json
+
+      # 3. The Bulletproof Upload (Native curl)
+      - name: Upload to Katarina
+        run: |
+          curl -i -X POST "https://katarina.shieldmate.io/api/v1/bom" \
+            -H "Content-Type: multipart/form-data" \
+            -H "X-API-Key: ${{ secrets.DTRACK_API_KEY }}" \
+            -F "autoCreate=true" \
+            -F "projectName=${{ github.event.repository.name }}" \
+            -F "projectVersion=v1.0" \
+            -F "bom=@bom.json"
