@@ -1,0 +1,16 @@
+{
+  "/[domain]/page": "/[domain]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/assess/[id]/page": "/admin/assess/[id]",
+  "/admin/assess/page": "/admin/assess",
+  "/admin/documents/page": "/admin/documents",
+  "/admin/msp/page": "/admin/msp",
+  "/admin/onboarding/page": "/admin/onboarding",
+  "/admin/page": "/admin",
+  "/admin/respond/[id]/page": "/admin/respond/[id]",
+  "/admin/respond/page": "/admin/respond",
+  "/auth/confirm/route": "/auth/confirm",
+  "/login/page": "/login",
+  "/page": "/"
+}

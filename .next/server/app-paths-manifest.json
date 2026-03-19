@@ -1,0 +1,16 @@
+{
+  "/[domain]/page": "app/[domain]/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/assess/[id]/page": "app/admin/assess/[id]/page.js",
+  "/admin/assess/page": "app/admin/assess/page.js",
+  "/admin/documents/page": "app/admin/documents/page.js",
+  "/admin/msp/page": "app/admin/msp/page.js",
+  "/admin/onboarding/page": "app/admin/onboarding/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/respond/[id]/page": "app/admin/respond/[id]/page.js",
+  "/admin/respond/page": "app/admin/respond/page.js",
+  "/auth/confirm/route": "app/auth/confirm/route.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
+}
